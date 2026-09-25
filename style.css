@@ -1,0 +1,83 @@
+/* Общий фон страницы */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #000000;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Карточка по центру */
+.card {
+    background: #1a1d24;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    width: 320px;
+    border: 1px solid #2a2e38;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ff0000; /* фирменный оранжевый FACEIT */
+    object-fit: cover;
+}
+
+h1 {
+    margin: 16px 0 4px;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0 0 24px;
+    color: #8a8f9c;
+}
+
+/* Два блока со статистикой в ряд */
+.stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat {
+    flex: 1;
+    background: #43464d;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.level {
+    color: #f80404;
+}
+
+.label {
+    font-size: 13px;
+    color: #fdfdfd;
+}
+
+.button {
+    display: inline-block;
+    background: #ff0000;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Эффект при наведении мыши */
+.button:hover {
+    background: #ff7a33;
+}
