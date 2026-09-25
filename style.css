@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    color: #000000;
+    color: #fffdfd;
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
     padding: 40px;
     border-radius: 16px;
     text-align: center;
-    width: 320px;
+    width: 380px;
     border: 1px solid #2a2e38;
 }
 
@@ -26,6 +26,7 @@ body {
     border-radius: 50%;
     border: 3px solid #ff0000; /* фирменный оранжевый FACEIT */
     object-fit: cover;
+    transition: transform 0.25s, box-shadow 0.25s; /* плавность эффекта */
 }
 
 h1 {
@@ -70,7 +71,7 @@ h1 {
 .button {
     display: inline-block;
     background: #ff0000;
-    color: rgb(0, 0, 0);
+    color: rgb(248, 244, 244);
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 8px;
@@ -80,4 +81,109 @@ h1 {
 /* Эффект при наведении мыши */
 .button:hover {
     background: #ff7a33;
+}
+
+/* ===== Эффекты при наведении ===== */
+
+/* Аватар немного увеличивается и начинает светиться */
+.avatar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 24px rgba(255, 0, 0, 0.6);
+}
+
+/* Кнопка слегка приподнимается */
+.button {
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Разделы в стиле FACEIT ===== */
+
+.panel {
+    margin-top: 28px;
+    text-align: left;
+}
+
+/* Заголовок раздела: капс, оранжевая полоска слева */
+.panel-title {
+    margin: 0 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid #ff5500;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Строка настройки: название слева, значение справа */
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #111318;
+    border-bottom: 1px solid #1f232b;
+    transition: background 0.2s;
+}
+
+.row:first-of-type {
+    border-radius: 6px 6px 0 0;
+}
+
+.row:last-of-type {
+    border-radius: 0 0 6px 6px;
+    border-bottom: none;
+}
+
+.row:hover {
+    background: #1c1f27;
+}
+
+.row-name {
+    color: #8a8f9c;
+    font-size: 14px;
+}
+
+.row-value {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Девайсы: плитки по две в ряд */
+.gear-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.gear {
+    background: #111318;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.gear:hover {
+    border-color: #ff5500;
+    transform: translateY(-2px);
+}
+
+.gear-type {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff5500;
+    margin-bottom: 4px;
+}
+
+.gear-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
 }
