@@ -1,6 +1,8 @@
 /* Общий фон страницы */
 body {
     margin: 0;
+    padding: 24px 12px; /* отступ от краёв экрана */
+    box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -16,7 +18,9 @@ body {
     padding: 40px;
     border-radius: 16px;
     text-align: center;
-    width: 380px;
+    width: 100%;            /* занимает всю доступную ширину... */
+    max-width: 460px;       /* ...но на компьютере не шире 460px */
+    box-sizing: border-box; /* padding входит в ширину, а не добавляется к ней */
     border: 1px solid #2a2e38;
 }
 
@@ -186,4 +190,26 @@ h1 {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
+}
+
+/* ===== Телефоны: экраны уже 480px ===== */
+@media (max-width: 480px) {
+    .card {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .value {
+        font-size: 24px;
+    }
+}
+
+/* Очень узкие экраны: девайсы в одну колонку */
+@media (max-width: 340px) {
+    .gear-grid {
+        grid-template-columns: 1fr;
+    }
 }
