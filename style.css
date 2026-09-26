@@ -213,3 +213,45 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Прицел ===== */
+
+/* Код прицела: моноширинный шрифт, выделяется целиком по клику */
+.crosshair-code {
+    display: block;
+    background: #111318;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+    word-break: break-all; /* на узком экране код переносится, а не вылезает */
+    user-select: all;
+}
+
+.copy-button {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #ff5500;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.copy-button:hover {
+    background: #ff7a33;
+    transform: translateY(-2px);
+}
+
+/* Состояние после успешного копирования: зелёная кнопка */
+.copy-button.copied {
+    background: #2ecc71;
+}
